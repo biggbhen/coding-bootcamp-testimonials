@@ -2,25 +2,35 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 .container {
-  border: 2px solid green;
-  max-width: 70vw;
+  /* border: 2px solid green; */
+  max-width: 61.25rem;
   width: 90%;
   margin: 2rem auto;
   padding: 4rem;
   overflow: auto;
+  background-image: url('./images/pattern-curve.svg');
+  background-position: left 0 bottom 0;
+  background-repeat: no-repeat;
+  background-size: 50% 20%;
+  box-shadow: 3px 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 h1 {
   margin-top: 1.5rem;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  font-weight: 400;
 }
 h1 span {
   margin-left: 0.5rem;
   font-weight: 100;
 }
 p {
-  line-height: 1.5rem;
+  line-height: 2rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  word-spacing: 0.3rem;
+  font-weight: 400;
 }
 ul {
   position: relative;
@@ -35,20 +45,32 @@ ul li {
   bottom: 0;
 }
 ul li .arrange {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100%;
   display: flex;
 }
 ul li .arrange .testimony {
-  position: relative;
+  /* border: 1px solid; */
+  /* position: relative; */
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  left: 11%;
-  width: 50%;
+  left: 3%;
+  width: 60%;
+  height: 100%;
+  z-index: 100;
+  background-image: url('./images/pattern-quotes.svg');
+  background-position: left 15% top 15%;
+  background-repeat: no-repeat;
 }
 ul li .arrange .icon {
   width: 50%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  /* border: 1px solid red; */
+
   background-image: url('./images/pattern-bg.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -59,11 +81,31 @@ ul li .arrange .icon {
   align-items: center;
 }
 ul li .arrange .icon figure {
-  /* border: 1px solid red; */
+  /* margin: auto; */
+  position: relative;
+  /* z-index: 100; */
   width: 80%;
   height: 80%;
+  /* border: 1px solid black; */
 }
-ul li .arrange .icon figure img {
-  width: 100%;
+ul li .arrange .icon figure > img {
   height: 100%;
+  width: 100%;
+}
+.arrow {
+  /* border: 1px solid red; */
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  width: 30%;
+  padding: 10px;
+  box-shadow: 3px 10px 20px 0 rgba(0, 0, 0, 0.1);
+  bottom: -7%;
+  left: 10%;
+}
+.arrow > img {
+  width: clamp(10px, 1.5vw, 20px);
 }
