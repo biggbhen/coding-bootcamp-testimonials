@@ -53,7 +53,7 @@ ul li .arrange {
 }
 ul li .arrange .testimony {
   position: absolute;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   left: 3%;
@@ -61,8 +61,12 @@ ul li .arrange .testimony {
   height: 30rem;
   z-index: 100;
   background-image: url('./images/pattern-quotes.svg');
+  display: none;
   background-position: left 15% top 15%;
   background-repeat: no-repeat;
+}
+ul li .arrange .current {
+  display: flex;
 }
 ul li .arrange .icon {
   width: 50%;
@@ -89,9 +93,16 @@ ul li .arrange .icon figure {
   /* border: 1px solid black; */
 }
 ul li .arrange .icon figure > img {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
   border-radius: 0.625rem;
   height: 100%;
   width: 100%;
+}
+ul li .arrange .icon figure > .current {
+  display: block;
 }
 .arrow {
   /* border: 1px solid red; */
