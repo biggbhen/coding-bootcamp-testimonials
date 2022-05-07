@@ -7,7 +7,7 @@ nextBtn.addEventListener('click', function (e) {
   let nextIndex;
   let imgArray = [...UIimage];
   let testimonyArr = [...UItestimony];
-  console.log(testimonyArr);
+  // console.log(testimonyArr);
   testimonyArr.forEach((item, index) => {
     // checked the index of the item with the current class .
 
@@ -43,6 +43,22 @@ nextBtn.addEventListener('click', function (e) {
 previousBtn.addEventListener('click', function (e) {
   let previousIndex;
   let imgArray = [...UIimage];
+  let testimonyArr = [...UItestimony];
+
+  // console.log(testimonyArr);
+  testimonyArr.forEach((item, index) => {
+    // checked the index of the item with the current class .
+
+    if (item.classList.contains('current')) {
+      previousIndex = index - 1;
+    }
+    // removed the class from the item
+    item.classList.remove('current');
+  });
+  if (previousIndex < 0) {
+    previousIndex = testimonyArr.length - 1;
+  }
+  testimonyArr[previousIndex].classList.add('current');
 
   imgArray.forEach((item, index) => {
     // checked the index of the item with the current class .
