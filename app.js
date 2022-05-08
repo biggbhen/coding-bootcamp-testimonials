@@ -4,6 +4,7 @@ const nextBtn = document.querySelector('.next-btn');
 const previousBtn = document.querySelector('.previous-btn');
 
 nextBtn.addEventListener('click', function (e) {
+  // console.log('hey');
   let nextIndex;
   let imgArray = [...UIimage];
   let testimonyArr = [...UItestimony];
@@ -40,12 +41,15 @@ nextBtn.addEventListener('click', function (e) {
   e.preventDefault();
 });
 
+// previousBtn arrow
+
 previousBtn.addEventListener('click', function (e) {
+  console.log('hello');
   let previousIndex;
   let imgArray = [...UIimage];
   let testimonyArr = [...UItestimony];
+  console.log(testimonyArr);
 
-  // console.log(testimonyArr);
   testimonyArr.forEach((item, index) => {
     // checked the index of the item with the current class .
 
